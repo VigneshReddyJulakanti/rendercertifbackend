@@ -26,5 +26,5 @@ app.get("/",(req,res)=>{
 // Route
 app.use("/user", require("./routes/user"));
 app.use("/api/auth", require("./routes/auth"));
-
-app.listen(5000, () => console.log("Server is running"));
+const port = process.env.PORT || 5000 
+app.listen(port, () => console.log("Server is running"));
