@@ -19,7 +19,9 @@ mongoose
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin:"*",
+  }));
 app.get("/",(req,res)=>{
   res.send("you are in home of server")
 });
