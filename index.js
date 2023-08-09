@@ -18,10 +18,11 @@ mongoose
   .catch((err) => console.log(err));
 
 // Middleware
-app.use(express.json());
 app.use(cors({
     origin:"*",
   }));
+app.use(express.json());
+
 app.get("/",(req,res)=>{
   res.send("you are in home of server")
 });
